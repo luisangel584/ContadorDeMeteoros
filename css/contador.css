@@ -18,12 +18,12 @@ body {
 
 .container .top {
     width: 100%;
-    height: 60vh;
+    height: 65vh;
     background: tomato;
 }
 
 .container .bottom {
     width: 100%;
-    height: 40vh;
-    background: teal;
+    height: 35vh;
+    background: lightgray;
 }
