@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -14,6 +16,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    position: relative;
 }
 
 .container .top {
@@ -62,7 +66,7 @@ body {
 
 .button-cont .button p {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
     text-shadow: 0px 0px 5px #333;
 }
 
@@ -84,4 +88,19 @@ body {
 
 .button-cont .button.azul{
     background: rgba(41, 128, 185,1.0);
+}
+
+
+
+/*                  Fecha y hora:               ;*/
+
+.container .center {
+    width: 80%;
+    height: 20vh;
+    border-radius: 50%;
+
+    background: whitesmoke;
+    
+    position: absolute;
+    bottom: 20vh;
 }
