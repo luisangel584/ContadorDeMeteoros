@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contador de Meteoros</title>
 
+    <link rel="stylesheet" href="css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <link rel="stylesheet" href="css/contador.css">
 
@@ -16,32 +17,261 @@
         <div class="top">
             <div class="title">Meteoros</div>
             <div class="button-cont">
-                <div class="button rojo">
-                    <p>2</p>
+                <div class="button-item">
+                     <div class="button rojo" id="buttonRed">
+                        <p id="valRed">0</p>                    
+                    </div>
+                    <div class="less" id="lessRed">
+                        <p>-</p>
+                    </div>
                 </div>
-                <div class="button amarillo">
-                    <p>8</p>
+                <div class="button-item">
+                     <div class="button amarillo" id="buttonYell">
+                        <p id="valYell">0</p>                    
+                    </div>
+                    <div class="less" id="lessYell">
+                        <p>-</p>
+                    </div>
                 </div>
-                <div class="button morado">
-                    <p>12</p>
+                <div class="button-item">
+                     <div class="button morado" id="buttonVio">
+                        <p id="valVio">0</p>                    
+                    </div>
+                    <div class="less" id="lessVio">
+                        <p>-</p>
+                    </div>
                 </div>
             </div>
             <div class="button-cont">
-                <div class="button naranja">
-                    <p>9</p>
+                <div class="button-item">
+                     <div class="button naranja" id="buttonOra">
+                        <p id="valOra">0</p>                    
+                    </div>
+                    <div class="less" id="lessOra">
+                        <p>-</p>
+                    </div>
                 </div>
-                <div class="button azul">
-                    <p>23</p>
+                <div class="button-item">
+                     <div class="button azul" id="buttonBlue">
+                        <p id="valBlue">0</p>                    
+                    </div>
+                    <div class="less" id="lessBlue">
+                        <p>-</p>
+                    </div>
                 </div>
-                <div class="button"></div>
+                <div class="button-item">
+                     <div class="button save">
+                        <p class="fa fa-floppy-o"></p>                    
+                    </div>
+                    <div class="less" id="lessVio">
+                        <p style="cursor: default; opacity: 0;">-</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="bottom"></div>
         <div class="center">
-            <p class="hora">11:23pm</p>
-            <p class="fecha">Cozumel.23.Abril</p>
+            <p class="hora" id="time"></p>
+            <p class="fecha">Cozumel.<span id="day"></span>.<span id="month"></span></p>
         </div>
     </div>
+
+    <script>
+        var buttonRed = document.getElementById('buttonRed');
+        var buttonYell = document.getElementById('buttonYell');
+        var buttonVio = document.getElementById('buttonVio');
+        var buttonOra = document.getElementById('buttonOra');
+        var buttonBlue = document.getElementById('buttonBlue');
+
+        var lessRed = document.getElementById('lessRed');
+        var lessYell = document.getElementById('lessYell');
+        var lessVio = document.getElementById('lessVio');
+        var lessOra = document.getElementById('lessOra');
+        var lessBlue = document.getElementById('lessBlue');
+
+        var valRed = document.getElementById('valRed');
+        var valYell = document.getElementById('valYell');
+        var valVio = document.getElementById('valVio');
+        var valOra = document.getElementById('valOra');
+        var valBlue = document.getElementById('valBlue');
+
+        var redCounter = 1;
+        var yellCounter = 1;
+        var vioCounter = 1;
+        var oraCounter = 1;
+        var blueCounter = 1;
+
+
+        // Sumar
+        buttonRed.addEventListener('click', function(){
+            console.log(redCounter);
+            valRed.innerHTML = redCounter;
+            redCounter++;
+            return redCounter;
+        });
+
+        buttonYell.addEventListener('click', function(){
+            console.log(yellCounter);
+            valYell.innerHTML = yellCounter;
+            yellCounter++;
+            return yellCounter;
+        });
+
+        buttonVio.addEventListener('click', function(){
+            console.log(vioCounter);
+            valVio.innerHTML = vioCounter;
+            vioCounter++;
+            return vioCounter;
+        });
+
+        buttonOra.addEventListener('click', function(){
+            console.log(oraCounter);
+            valOra.innerHTML = oraCounter;
+            oraCounter++;
+            return oraCounter;
+        });
+
+        buttonBlue.addEventListener('click', function(){
+            console.log(blueCounter);
+            valBlue.innerHTML = blueCounter;
+            blueCounter++;
+            return blueCounter;
+        });
+
+
+
+
+
+
+
+        // buttonVio.addEventListener('click', function(){
+        //     console.log(vioCounter);
+        //     valVio.innerHTML = vioCounter;
+        //     vioCounter++;
+        //     return vioCounter;
+        // });
+
+        // buttonVio.addEventListener('click', function(){
+        //     console.log(vioCounter);
+        //     valVio.innerHTML = vioCounter;
+        //     vioCounter++;
+        //     return vioCounter;
+        // });
+
+
+        // Restar
+        lessRed.addEventListener('click', function(){
+            redCounter = redCounter - 1;
+            console.log(redCounter);
+            valRed.innerHTML = redCounter;
+            return redCounter;
+        });
+
+        lessYell.addEventListener('click', function(){
+            yellCounter = yellCounter - 1;
+            console.log(yellCounter);
+            valYell.innerHTML = yellCounter;
+            return yellCounter;
+        });
+
+        lessVio.addEventListener('click', function(){
+            vioCounter = vioCounter - 1;
+            console.log(vioCounter);
+            valVio.innerHTML = vioCounter;
+            return vioCounter;
+        });
+
+        lessOra.addEventListener('click', function(){
+            oraCounter = oraCounter - 1;
+            console.log(oraCounter);
+            valOra.innerHTML = oraCounter;
+            return oraCounter;
+        });
+
+        lessBlue.addEventListener('click', function(){
+            blueCounter = blueCounter - 1;
+            console.log(blueCounter);
+            valBlue.innerHTML = blueCounter;
+            return blueCounter;
+        });
+
+
+
+
+
+
+
+
+
+        startTime();
+
+        function startTime() {
+            var today = new Date();
+            var d = today.getDate();
+            var month;
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkZero(m);
+            s = checkZero(s);
+            d = checkZero(d);
+
+            switch(month = today.getMonth()){
+                case 0:
+                    month = "Enero";
+                    break;
+                case 1:
+                    month = "Febrero";
+                    break;
+                case 2:
+                    month = "Marzo";
+                    break;
+                case 3:
+                    month = "Abril";
+                    break;
+                case 4:
+                    month = "Mayo";
+                    break;
+                case 5:
+                    month = "Junio";
+                    break;
+                case 6:
+                    month = "Julio";
+                    break;
+                case 7:
+                    month = "Agosto";
+                    break;
+                case 8:
+                    month = "Septiembre";
+                    break;
+                case 9:
+                    month = "Octubre";
+                    break;
+                case 10:
+                    month = "Noviembre";
+                    break;
+                case 11:
+                    month = "Diciembre";
+                    break;
+                default:
+                    month = month;
+            }
+
+
+
+            document.getElementById('time').innerHTML =
+            h + ":" + m + ":" + s + ".hrs";
+            var t = setTimeout(startTime, 500);
+            document.getElementById('day').innerHTML = d;
+            document.getElementById('month').innerHTML = month;
+        }
+        function checkZero(i) {
+            if (i < 10) {i = "0" + i};
+            return i;
+        }
+
+
+    </script>
     
 </body>
 </html>

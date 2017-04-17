@@ -22,7 +22,7 @@ body {
 
 .container .top {
     width: 100%;
-    height: 70vh;
+    height: 85vh;
     background: rgba(44, 62, 80,1.0);
 
     display: flex;
@@ -33,7 +33,7 @@ body {
 
 .container .bottom {
     width: 100%;
-    height: 30vh;
+    height: 15vh;
     background: lightgray;
 }
 
@@ -72,16 +72,17 @@ body {
     align-items: center;
 
     border: 8px solid rgba(236, 240, 241,1.0);
-    border-top-color: teal;
 
     transition: all 0.3s ease-in-out;
+    position: relative;
 }
 
 .button-cont:last-child {
     margin-bottom: 2em;
 }
 
-.button-cont .button:hover {
+.button-cont .button:hover,
+ .button-cont .button:active {
     /*box-shadow: 0px 0px 5px 1px rgba(127, 140, 141,1.0),
                 1px 1px 2px 2px #666 inset;*/
     animation: pushButton 1.2s;
@@ -98,7 +99,7 @@ body {
     }
 }
 
-.button-cont .button p {
+.button-cont .button > p {
     text-align: center;
     font-size: 1.5em;
     text-shadow: 0px 0px 5px #333;
@@ -124,6 +125,39 @@ body {
     border-top-color: rgba(41, 128, 185,1.0);
 }
 
+.button-cont .button.save {
+    border: 2px solid rgba(236, 240, 241,1.0);
+    background: none;
+}
+
+
+
+.button-cont .less {
+    /*position: absolute;
+    
+    width: 100%;
+    bottom: -70%;
+    left: 0;*/
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: lightgray;
+    
+    cursor: pointer;
+}
+
+.button-cont .less p {
+    font-size: 4em;
+    margin: 0;
+}
+
+
+.button-cont .button.save p {
+    font-size: 3em;
+}
 
 
 /*                  Fecha y hora:               ;*/
@@ -136,7 +170,7 @@ body {
     background: whitesmoke;
     
     position: absolute;
-    bottom: 20vh;
+    bottom: 5vh;
 
     display: flex;
     flex-direction: column;
